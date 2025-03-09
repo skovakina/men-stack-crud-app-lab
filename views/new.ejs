@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Post</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-container">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/posts" class="nav-link">Posts</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1 class="page-title">Create a New Post</h1>
+      <form action="/posts" method="POST" class="post-form">
+        <label for="title" class="form-label">Title:</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="form-input"
+          required
+        />
+
+        <label for="imageUrl" class="form-label">Image URL:</label>
+        <input
+          type="text"
+          id="imageUrl"
+          name="imageUrl"
+          class="form-input"
+          required
+        />
+
+        <label for="description" class="form-label">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          class="form-textarea"
+          required
+        ></textarea>
+
+        <button type="submit" class="form-button">Post</button>
+      </form>
+    </main>
+  </body>
+</html>

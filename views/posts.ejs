@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Posts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-container">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/posts" class="nav-link">Posts</a></li>
+        <li class="nav-item">
+          <a href="/posts/new" class="nav-link">New Post</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1 class="page-title">Browse Posts</h1>
+      <ul class="post-list">
+        <% posts.forEach(post => { %>
+        <a href="/posts/<%= post._id %>" class="post-link">
+          <li class="post-card">
+            <h2 class="post-title"><%= post.title %></h2>
+            <h2 class="post-title"></h2>
+            <img
+              src="<%= post.imageUrl %>"
+              alt="Image of <%= post.title %>"
+              class="post-image"
+            />
+            <p class="post-description"><%= post.description %></p>
+          </li>
+        </a>
+
+        <% }) %>
+      </ul>
+    </main>
+  </body>
+</html>

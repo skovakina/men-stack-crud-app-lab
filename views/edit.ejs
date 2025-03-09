@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-container">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/posts" class="nav-link">Posts</a></li>
+        <li class="nav-item">
+          <a href="/posts/new" class="nav-link">New Post</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1 class="page-title">Edit Post</h1>
+
+      <form
+        class="post-form"
+        action="/posts/<%= post._id %>?_method=PUT"
+        method="POST"
+      >
+        <label for="title" class="form-label">Title:</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="form-input"
+          value="<%= post.title %>"
+          required
+        />
+
+        <label for="imageUrl" class="form-label">Image URL:</label>
+        <input
+          type="text"
+          id="imageUrl"
+          name="imageUrl"
+          class="form-input"
+          value="<%= post.imageUrl %>"
+          required
+        />
+
+        <label for="description" class="form-label">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          class="form-textarea"
+          rows="4"
+          required
+        >
+<%= post.description %></textarea
+        >
+
+        <button type="submit" class="form-button">Update Post</button>
+      </form>
+    </main>
+  </body>
+</html>

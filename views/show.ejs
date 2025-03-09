@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="app-container">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/posts" class="nav-link">Posts</a></li>
+        <li class="nav-item">
+          <a href="/posts/new" class="nav-link">New Post</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1 class="post-title"><%= post.title %></h1>
+      <img
+        class="post-image"
+        src="<%= post.imageUrl %>"
+        alt="Image of <%= post.title %>"
+      />
+
+      <p class="post-description"><%= post.description %></p>
+
+      <div class="post-actions">
+        <a class="edit-button" href="/posts/<%= post._id %>/edit">Edit</a>
+
+        <form
+          class="delete-form"
+          action="/posts/<%= post._id %>?_method=DELETE"
+          method="POST"
+        >
+          <button class="delete-button" type="submit">Delete</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
