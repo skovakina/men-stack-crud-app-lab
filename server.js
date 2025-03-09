@@ -33,7 +33,6 @@ app.get("/posts/new", (req, res) => {
 });
 
 app.get("/", async (req, res) => {
-  const allPosts = await Post.find({});
   res.render("posts.ejs", { posts: allPosts });
 });
 
