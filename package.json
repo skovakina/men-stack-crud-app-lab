@@ -6,17 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/myDeveloperJourney/men-stack-crud-app-fruits.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/myDeveloperJourney/men-stack-crud-app-fruits/issues"
-  },
-  "homepage": "https://github.com/myDeveloperJourney/men-stack-crud-app-fruits#readme",
   "description": "",
   "dependencies": {
     "dotenv": "^16.4.7",
